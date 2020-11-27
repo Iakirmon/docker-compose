@@ -6,7 +6,7 @@ services:
     php-httpd:
         build: .
         ports: 
-            - "80:80"
+            - "6666:80"
 
     baza_danych:
         image: mysql
