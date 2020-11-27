@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+
+    php-httpd:
+        build: .
+        ports: 
+            - "6666:80"
+
+    baza_danych:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+           MYSQL_ROOT_PASSWORD: example
